@@ -1,0 +1,11 @@
+<color-picker id="picker" imageStyle="margin: 150rpx 150rpx 100rpx;width:450rpx;height:450rpx;border-radius:225rpx;" size="{{size}}" top="{{top}}" left="{{left}}" brightness="255" bind:selectColor="selectColor"></color-picker>
+
+<view class="box">
+    <view style="height:30rpx"></view>
+    <text style="font-size: 20px;">色 彩 值</text>
+    <view class="text" bindtap="copy">{{color}}</view>
+    <text style="font-size: 20px;">色 块 展 示</text>
+    <view style="width: 350rpx;margin: 20px auto 30px;">
+        <view class="color-t" style="height:100rpx;background-color:{{color}};border-radius: 20rpx;"></view>
+    </view>
+</view>

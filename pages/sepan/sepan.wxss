@@ -1,0 +1,55 @@
+/* pages/sepan/sepan.wxss */
+/* 用伪类写底盘和阴影 */
+#picker:before{
+    content: '';
+    position: absolute;
+    top: 127rpx;
+    left: 128rpx;
+    z-index: -1;
+    width: 500rpx;
+    height: 500rpx;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: 8px 8px 16px #bebebe,
+        -8px -8px 16px #ffffff;
+
+}
+
+/* 给色盘的取色条写样式 */
+.color-t{
+   
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow:  -10rpx -10rpx 20rpx rgba(255, 255, 255, 0.5),
+    10rpx 10rpx 20rpx rgba(70, 70, 70, 0.12);
+}
+/* 文字框样式 */
+.text {
+    margin: 40rpx auto;
+    width: 70%;
+    height: 50px;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: inset 8px 8px 16px #bebebe,
+    inset -8px -8px 16px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.box{
+width: 90%;
+    background-color: #fff;
+   margin: 20px auto 20px;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: 8px 8px 16px #bebebe,
+        -8px -8px 16px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+

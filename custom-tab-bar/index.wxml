@@ -1,0 +1,21 @@
+<!--custom-tab-bar/index.wxml-->
+
+
+<view class="cu-bar tabbar color" style="height: 120rpx;">
+				<view class="action {{selected === 0 ? 'active' : 'default'}}" data-index="0" bindtap="switchTab" style="position: relative; left: 0rpx; top: 18rpx">
+					<view class="cuIcon-home"></view> 首页
+				</view>
+				
+				<view class="action text-gray add-action" style="width: 750rpx; height: 12rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+                    <button class="cu-btn cuIcon-discover bg-grey shadow square" bindtap="toSquare"></button>
+					色彩广场
+				</view>
+				
+				<view class="action {{selected === 1 ? 'active' : 'default'}}" data-index="1" bindtap="switchTab" style="position: relative; left: 0rpx; top: 17rpx">
+					<view class="cuIcon-profile"></view>我的
+				</view>
+			</view>
+			
+			
+
+

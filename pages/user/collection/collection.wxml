@@ -1,0 +1,32 @@
+<!--pages/user/collection/collection.wxml-->
+<view class="container">
+    <view wx:for="{{ColorsList}}" wx:key="key" class='colors-container' wx:for-index="key"  data-colors="{{item.HEX}}" bindtap='copy' bindlongtap="check" data-id="{{key}}">
+        <view style="width: 80px;height: 100%;display: flex;align-items: center;justify-content: center;">
+            <view style="width: 90%;display: flex;flex-direction: column;margin-top: 10px;">
+                <text style="font-size: 16px;font-weight: 600;">{{item.Name}}</text>
+                <view style="height: 44rpx; width: 132rpx; display: block; box-sizing: border-box">
+                    <van-divider borderColor="#9c9c9c">
+                    </van-divider>
+                </view>
+                <text>{{item.Type}}</text>
+            </view>
+        </view>
+        <block wx:if="{{item.Type == 'collocation'}}">
+            <view wx:for="{{item.HEX}}" wx:for-item="colors" wx:key="key" class='color' style='{{"background-color:"+colors}}'></view>
+        </block>
+        <block wx:if="{{item.Type == 'gradient'}}">
+            <view style='width: 250px;height: 100%;background: linear-gradient(to right, {{item.HEX[0]}}, {{item.HEX[1]}});'>
+            </view>
+        </block>
+    </view>
+</view>
+
+<view class="hover">
+    <view class="hover-A">
+        <view class="cuIcon-top" style="font-size: 25px; color: #8b8b8b;" bindtap="handleBackTop">
+        </view>
+    </view>
+</view>
+
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />

@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "color-picker":"/miniprogram_npm/mini-color-picker/color-picker" 
+    },
+    "navigationBarTitleText": "色板拾色"
+}

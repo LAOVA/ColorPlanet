@@ -1,0 +1,21 @@
+<view style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
+    <view class="back">
+        <canvas canvas-id="canvasIn" class="canvas" style="width: 300px; height:300px;" bindtouchmove="GetPoint" bindtouchend="makeImg">
+        </canvas>
+    </view>
+    <view class="back2">
+        <view style="width: 90%;display: flex;align-items: center; justify-content: space-between;flex-direction: row">
+            <view class="button" bindtap="openAndDraw">打开图片
+            </view>
+            <block wx:if="{{outImg}}">
+                <view class="img">
+                    <image style="width: 80px; height: 80px; border-radius: 10px;" src="{{outImg}}" />
+                    <image style="width: 80px; height: 80px; border-radius: 10px;position: absolute;" src="/img/add.png" />
+                </view>
+                <view class="img">
+                    <view style="width: 80px; height: 80px; border-radius: 10px; display: flex;align-items: center; justify-content: center;background: rgba({{RGB.r}},{{RGB.b}},{{RGB.g}},{{RGB.a}}) " bindtap="copy">(点击复制)</view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

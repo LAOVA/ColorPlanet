@@ -1,0 +1,61 @@
+/* pages/test1/test1.wxss */
+.bg {
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+    position: relative;
+    /* z-index: -1; */
+    border-radius: 50%;
+    /* border: 1rpx rgba(128, 128, 128, 0.103) solid; */
+    background-color: #f1f1f1;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: 8px 8px 16px #bebebe,
+        -8px -8px 16px #ffffff;
+}
+
+.back {
+    position: relative;
+    top: 50px;
+    left: 20px;
+    width: 90%;
+    height: 30vh;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: 8px 8px 16px #bebebe,
+        -8px -8px 16px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text {
+    width: 70%;
+    height: 50px;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: inset 8px 8px 16px #bebebe,
+    inset -8px -8px 16px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.button{
+    height: 46px;
+    width: 100px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 8px 8px 16px #bebebe,
+        -8px -8px 16px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: box-shadow .1s ease-in-out;  
+}  
+.button:active{  
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1), 0 0 0 rgba(255, 255, 255, 1),  
+    inset 5px 5px 30rpx rgba(0, 0, 0, 0.1), -18rpx -18rpx 30rpx rgba(255, 255, 255, 1);  
+}

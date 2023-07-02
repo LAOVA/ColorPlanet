@@ -1,0 +1,140 @@
+.color-picker-view {
+    background-color: #e0e0e0;
+   display: flex;
+   justify-content: center;
+ }
+ 
+ .color-picker-slider {
+   position: absolute;
+   background-color: #e0e0e0;
+ }
+ /* 设置三个圆圈的样式 */
+ .color{
+     /* z-index: 2; */
+     /* 行内块元素，成一列 */
+    display: inline-block;
+    /* 设置大小 */
+   width: 160rpx;
+   height: 160rpx;
+   border-radius: 50%;
+  justify-content: center;
+  margin: 40rpx 40rpx 60rpx 50rpx;
+  /* 内阴影 */
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.842) inset;
+    position: relative;
+}
+/* 设置圈内部文字 */
+.word{
+    /* 设置文字大小颜色粗细 */
+    font-size: 40rpx;
+    color: #fff;
+    font-weight: 900;
+  justify-content: center;
+    /* 文字水平垂直居中 */
+   text-align: center;
+}
+/* 设置提示“取色”的文字 */
+.qs{
+    display: inline-block;
+    /* 设置大小颜色 */
+    font-size: 40rpx;
+    color: #fa8c35;
+    /* 设置边框圆角 */
+    border-radius: 80rpx/100rpx;
+    /* border-radius: 25px; */
+    border: 2rpx #fa8c35 solid;
+    padding: 4rpx 8rpx;
+    text-align: center;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: 8rpx 8rpx 16rpx #bebebe,
+    -8rpx -8rpx 32rpx #ffffff;
+}
+.back {
+    /* position: relative; */
+    top: 50px;
+    left: 20px;
+    width: 90%;
+    /* height: 30vh; */
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: 8px 8px 16px #bebebe,
+        -8px -8px 16px #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+}
+.text {
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: inset 8px 8px 16px #bebebe,
+    inset -8px -8px 16px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 40rpx;
+}
+.box{
+    width: 90%;
+    background-color: #fff;
+   margin: 20px auto 20px;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: 8px 8px 16px #bebebe,
+        -8px -8px 16px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+}
+   .box2 {
+       padding: 0;
+            width: 100%;
+            /* height: 300vh; */
+            display: flex;
+            background-color: #e0e0e0;
+            /* 让盒子中的子元素等距填满盒子 */
+            justify-content: space-around;
+            /* 让弹性盒子在必要的时候拆行 */
+            flex-wrap: wrap;
+            align-items: center;
+            border-radius: 20px;
+            margin-top: 30rpx;
+        }
+         /* 设定每个小盒子的样式 */
+        .box1 {
+             position: relative;
+            display: flex;
+            justify-content: space-around;
+            /* flex-direction 
+             可选值：
+                row （默认）灵活的项目将水平显示，一行
+                row-reverse 与row相同，顺序相反
+                column 将项目垂直显示，如一列
+                column-reverse 与column相同，顺序相反
+                initial 设置该属性为它的默认值
+                inherit 从父元素继承该属性           
+             */
+            flex-direction:column;
+            align-items: center;
+            align-content: center;
+            width: 80px;
+            height: 80px;
+            margin: 20rpx;
+            /* 阴影高光 */
+            box-shadow: 18rpx 18rpx 30rpx rgba(0, 0, 0, 0.1), -18rpx -18rpx 30rpx rgba(255, 255, 255, 1);
+            /* 边框圆角 */
+            border-radius: 20px;
+            /* 过度，让阴影过度，0.05秒 先进后出 */
+            transition: box-shadow .1s ease-in-out;
+        }
+        /* 点击效果 */
+         .box1:active {
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.1), 0 0 0 rgba(255, 255, 255, 1),
+                inset 5px 5px 30rpx rgba(0, 0, 0, 0.1), -18rpx -18rpx 30rpx rgba(255, 255, 255, 1);
+        }

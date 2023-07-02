@@ -1,0 +1,86 @@
+<!--pages/colorConvert/colorConvert.wxml-->
+<wxs module="filters" src="../../utils/tool.wxs"></wxs>
+
+<view class="back">
+    <view style=" position: relative;display: flex;align-items: center;justify-content: space-between;flex-direction: row; width: 80%;top: -20px;">
+        <text style="font-size: 20px;position: relative;color: rgb(255, 0, 0);">R:</text>
+        <view class="text">
+            <input style="margin-left: 8px;" auto-focus placeholder="{{color.r}}" bindinput="inputR" maxlength="3" />
+        </view>
+        <text style="font-size: 20px;position: relative;color: rgb(0, 255, 0);">G:</text>
+        <view class="text">
+            <input style="margin-left: 8px;" auto-focus placeholder="{{color.g}}" bindinput="inputG" maxlength="3" />
+        </view>
+        <text style="font-size: 20px;position: relative; color: rgb(0, 0, 255);">B:</text>
+        <view class="text">
+            <input style="margin-left: 8px;" auto-focus placeholder="{{color.b}}" bindinput="inputB" maxlength="3" />
+        </view>
+    </view>
+
+    <view style="width: 70%;height: 50px;display: flex;flex-direction: row;justify-content:space-between;align-items: center;position: relative;top: 10px;">
+        <view style="position:relative; width: 80px; background: {{convertData.hex}}; height: 80px;border-radius: 10px;box-shadow: 8px 8px 16px #bebebe,-8px -8px 16px #ffffff;"></view>
+        <view class="button" bindtap="convert">转 换</view>
+    </view>
+
+</view>
+
+<view class="back2">
+    <view class="cark" bindtap="copy">
+        <text style="font-size: 20px; font-weight:600">rgb:</text>
+        <block wx:for="{{convertData.rgb}}" wx:for-index="key" wx:key="key">
+            <view style="margin-top: 4px;">{{key}}: {{filters.toFix2(item)}}</view>
+        </block>
+    </view>
+
+    <view class="cark" bindtap="copy">
+        <text style="font-size: 20px; font-weight:600">cmyk:</text>
+        <block wx:for="{{convertData.cmyk}}" wx:for-index="key" wx:key="key">
+            <view style="margin-top: 4px;">{{key}}: {{filters.toFix2(item)}}</view>
+        </block>
+    </view>
+
+
+    <view class="cark" bindtap="copy">
+        <text style="font-size: 20px; font-weight:600">hsl:</text>
+        <block wx:for="{{convertData.hsl}}" wx:for-index="key" wx:key="key">
+            <view style="margin-top: 4px;">{{key}}: {{filters.toFix2(item)}}</view>
+        </block>
+    </view>
+
+    <view class="cark">
+        <text style="font-size: 20px; font-weight:600">hsv:</text>
+        <block wx:for="{{convertData.hsv}}" wx:for-index="key" wx:key="key">
+            <view style="margin-top: 4px;">{{key}}: {{filters.toFix2(item)}}</view>
+        </block>
+    </view>
+
+    <view class="cark">
+        <text style="font-size: 20px; font-weight:600">lab:</text>
+        <block wx:for="{{convertData.lab}}" wx:for-index="key" wx:key="key">
+            <view style="margin-top: 4px;">{{key}}: {{filters.toFix2(item)}}</view>
+        </block>
+    </view>
+
+    <view class="cark">
+        <text style="font-size: 20px; font-weight:600">lch:</text>
+        <block wx:for="{{convertData.lch}}" wx:for-index="key" wx:key="key">
+            <view style="margin-top: 4px;">{{key}}: {{filters.toFix2(item)}}</view>
+        </block>
+    </view>
+
+    <view class="cark">
+        <text style="font-size: 20px; font-weight:600">xyz:</text>
+        <block wx:for="{{convertData.xyz}}" wx:for-index="key" wx:key="key">
+            <view style="margin-top: 4px;">{{key}}: {{filters.toFix2(item)}}</view>
+        </block>
+    </view>
+
+    <view class="cark">
+        <text style="font-size: 20px; font-weight:600">yxy:</text>
+        <block wx:for="{{convertData.yxy}}" wx:for-index="key" wx:key="key">
+            <view style="margin-top: 4px;">{{key}}: {{filters.toFix2(item)}}</view>
+        </block>
+    </view>
+</view>
+
+<view style="height: 10vh;"></view>

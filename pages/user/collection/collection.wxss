@@ -1,0 +1,54 @@
+/* pages/user/collection/collection.wxss */
+
+.colors-container {
+    max-width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100rpx;
+    box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .colors-container .color {
+    flex: 1;
+    width: 100rpx;
+    height: 100%;
+  }
+
+  .container {
+      margin-top: -210rpx;
+    margin-bottom:80rpx;
+  }
+
+  .hover {
+    z-index: 999;
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 70vh;
+    right: 5px;
+    display: flex;
+}
+
+
+
+.hover-A {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), -2px -2px 2px rgba(255, 255, 255, .1);
+    transition: box-shadow .2s ease-in-out;
+}
+
+.hover-A:active {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1), 0 0 0 rgba(255, 255, 255, 1),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.1), -5px -5px 5px rgba(255, 255, 255, 1);
+}

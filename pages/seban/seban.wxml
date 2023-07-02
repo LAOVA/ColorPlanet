@@ -1,0 +1,17 @@
+<view style="height: 30vh;display: flex;align-items: center;justify-content: center;background-color: #e0e0e0;">
+    <view class="bg">
+        <view style="background: {{rgb}}; width: 100px; height: 100px;border-radius: 50%; margin: 10px 10px;box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.842) inset;" bindtap="toPick"></view>
+    </view>
+</view>
+
+<view class="back">
+    <text style="font-size: 20px;position: relative;top: -10px;">色 彩 值</text>
+    <view class="text">{{rgb}}</view>
+    <view style="width: 70%;height: 50px;display: flex;flex-direction: row;justify-content:space-between;align-items: center;position: relative; top: 20px;">
+        <view class="button" bindtap="copy">复 制</view>
+        <view class="button" bindtap="tocC">转 换</view>
+    </view>
+
+</view>
+
+<color-picker bindchangeColor="pickColor" initColor="{{rgb}}" show="{{pick}}" />

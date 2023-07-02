@@ -1,0 +1,28 @@
+<!--pages/user/user.wxml-->
+<view class="userinfo">
+    <block wx:if="{{userInfo}}" wx:key="key">
+        <image bindtap="ifLogout" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    <block wx:else>
+        <image bindtap="login" class="userinfo-avatar" src="/img/unlog.png" mode="cover"></image>
+        <text class="userinfo-nickname">点击头像登录</text>
+    </block>
+</view>
+
+<image class="bg_ware" src="/img/波浪分隔条.gif" style="position: absolute; left: 0rpx; top: 246rpx; width: 750rpx; height: 113rpx; display: block; box-sizing: border-box"></image>
+
+
+
+<view style="position: relative; top: 76px;">
+    <van-cell-group inset>
+        <van-cell title="　我的收藏" is-link icon="goods-collect" bindtap="toCollection"/>
+        <van-cell title="　意见反馈" is-link icon="smile-comment"/>
+        <van-cell title="　联系客服" is-link icon="service"/>
+        <button class="button" open-type='feedback' hover-class="none" style="width: 686rpx; height: 90rpx; display: block; box-sizing: border-box; left: 2rpx; top: -178rpx; background: none; border: none; position: relative"></button>
+        <button class="button" open-type='contact' hover-class="none" style="width: 686rpx; height: 90rpx; display: block; box-sizing: border-box; left: 2rpx; top: -176rpx; background: none; border: none; position: relative"></button>
+    </van-cell-group>
+</view>
+
+<!-- 通知节点 -->
+<van-dialog id="van-dialog" />

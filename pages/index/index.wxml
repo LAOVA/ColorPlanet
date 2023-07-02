@@ -1,0 +1,73 @@
+<!-- <button style="position: relative; left: 0rpx; top: 70rpx" bindtap="toSeban">色板</button>
+<button style="position: relative; left: 0rpx; top: 70rpx" bindtap="toSehuan">色环</button>
+<button style="position: relative; left: 0rpx; top: 70rpx" bindtap="toSepan">色盘</button>
+<button style="position: relative; left: 0rpx; top: 70rpx"  bindtap="togColor">取色1</button>
+<button style="position: relative; left: 0rpx; top: 70rpx"  bindtap="tocP">取色2</button>
+<view style="height: 20vh;"></view>
+<button style="position: relative; left: 0rpx; top: 70rpx" bindtap="tocStyleColor">传统色</button>
+<button style="position: relative; left: 0rpx; top: 70rpx" bindtap="tocMatching">配色库</button>
+<button style="position: relative; left: 0rpx; top: 70rpx"  bindtap="tocC">色彩转换</button> -->
+
+
+<view class="a">
+    <view class="b r" bindtap="toSeban">
+        <text>色板</text>
+    </view>
+    <view style="margin: -10px 140rpx 0; ">
+        <view class="b c g" bindtap="toSehuan">
+            <text>色环</text>
+        </view>
+        <view class="b c l" bindtap="toSepan">
+            <text>色盘</text>
+        </view>
+    </view>
+    <view class="d">
+        ———————— 拾 色 器 ————————
+    </view>
+</view>
+
+<view class="a" style="padding: 0;">
+    <view class="pi">
+        <!-- <image src="../../img/guofeng.png"></image> -->
+        <image src="../../img/1.png" bindtap="tocStyleColor"></image>
+        <!-- <image src="../../img/dapei.png"></image> -->
+        <image src="../../img/2.png" bindtap="tocMatching"></image>
+
+
+    </view>
+    <view class="pi">
+    </view>
+    <view class="d">
+        ————————— 色 库 —————————
+    </view>
+</view>
+
+
+<view class="buttom-box" style="padding: 0;">
+    <view class="box-pi" bindtap="showModal" data-target="DialogModal" style="background:linear-gradient(to right,rgba(255, 0, 0, 0.075),#1cbbb325 );">智 能 取 色 》 》 》</view>
+
+    <view class="box-pi" style="margin-left:40rpx;background:linear-gradient(to left,#0080ff4f,#1cbbb325 );" bindtap="tocC">色 值 转 换 》 》 》</view>
+</view>
+
+<!-- 对话框 -->
+<view class="cu-modal {{modalName=='DialogModal'?'show':''}}">
+    <view class="cu-dialog" style="width: 50%;background-color: #e0e0e0;">
+        <view class="padding-xl" style="display: flex;flex-direction: column; justify-content: center;align-items: center; ">
+            <view class="box-pi" style="margin-top: 0px;background:linear-gradient(to top,#1cbbb325 ,rgba(255, 0, 0, 0.075));" bindtap="togColor">获 取 主 色 》 》 》</view>
+            <view class="box-pi" style="margin-top: 20px;background:linear-gradient(to top,#0080ff4f,#1cbbb325 );" bindtap="tocP">图 片 拾 色 》 》 》</view>
+        </view>
+    </view>
+</view>
+
+<!-- 关闭按钮 -->
+<view class="cu-modal {{modalName=='DialogModal'?'show':''}}" style="width: 90rpx; height: 90rpx;top: 80vh;left: 330rpx; border-radius: 50%">
+    <view class="cu-dialog">
+        <view class="action" bindtap="hideModal">
+            <van-icon name="close" color="#8b8b8b" size="90rpx" />
+        </view>
+    </view>
+</view>
+
+
+<view style="height:300rpx">
+</view>

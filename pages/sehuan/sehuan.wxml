@@ -1,0 +1,17 @@
+<view class="color-picker-view">
+    <canvas id="colorPicker" style="width: {{raduis}}rpx;height: {{raduis}}rpx;border-radius: 50%;" canvas-id="colorPicker" class="color-picker" />
+    <canvas canvas-id="colorPickerSlider" class="color-picker-slider" style="width: {{raduis}}rpx;height: {{raduis}}rpx;z-index:1;background:rgba(0, 0, 0, 0.1);border-radius: 50%;" bindtouchstart="onSlide" bindtouchmove="onSlide" bindtouchend="onSlide" />
+</view>
+<view class="box" style="margin-top: 20px;">
+    <view style="height:40rpx"></view>
+    <text style="font-size: 20px;position: relative;">采 集 结 果</text>
+    <view class="text" bindtap="copy">{{pickColor}}</view>
+    <view class="boton-card"></view>
+    <view style="height:40rpx"></view>
+    <text style="font-size: 20px;position: relative;">快 速 取 色</text>
+    <view class="box2">
+        <view class="box1" bindtap="onClickRedColor" type="primary" style="background-color: red;"><text class="word">正红</text></view>
+        <view class="box1" bindtap="onClickGreenColor" type="primary" style="background-color: rgb(0,255,0);"><text class="word">正绿</text></view>
+        <view class="box1" bindtap="onClickBlueColor" type="primary" style="background-color:rgb(0, 0, blue);background: blue;"><text class="word">正蓝</text></view>
+    </view>
+</view>

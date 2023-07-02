@@ -1,0 +1,29 @@
+<van-tabs animated active="collocation" swipeable bind:change='onChange'>
+    <van-tab title="组合色" name="collocation">
+        <view class="container">
+            <block wx:if="{{type}}=='collocation'">
+                <view wx:for="{{List1}}" wx:key="key" class='colors-container' style='{{"width:"+colors.length * 40 + "px;"}}' data-colors="{{item.combination}}" bindtap='edit' data-type="collocation">
+                    <view wx:for="{{item.combination}}" wx:for-item="colors" wx:key="key" class='color' style='{{"background-color:"+colors}}'></view>
+                </view>
+            </block>
+        </view>
+    </van-tab>
+    <van-tab title="渐变色" name="gradient">
+        <view class="container">
+            <block wx:if="{{type}}=='gradient'">
+                <view wx:for="{{List2}}" wx:key="key" class='colors-container' style='background: linear-gradient(to right, {{item.colors[0]}}, {{item.colors[1]}});' data-colors="{{item.colors}}" bindtap='edit' data-type="gradient">
+                    <view style="background-color: #ffffff;border-radius: 4px;">
+                        <text style="font-size: 18px;font-weight: 600;">{{item.name}}</text>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </van-tab>
+</van-tabs>
+
+<view class="hover">
+    <view class="hover-A">
+        <view class="cuIcon-top" style="font-size: 25px; color: #8b8b8b;" bindtap="handleBackTop">
+        </view>
+    </view>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/edit/edit.wxml-->
+<view class="container">
+    <view class='colors-container' wx:if="{{blendent.colors}}" style='{{"width:"+blendent.colors.length * 40 + "px;"}}'>
+        <view wx:for="{{blendent.colors}}" wx:key="key" class="{{'color' + (index === selected ? ' selected' : '')}}" style='{{"background-color:"+item}}' bindtap='onColorSelected' data-index="{{index}}"></view>
+    </view>
+    <view class='selected-container'>
+        <view class='square-color' style='{{"background-color:"+blendent.colors[selected]}}'></view>
+        <view>
+            <view style='{{"color:"+blendent.colors[selected]}}'>{{blendent.colors[selected]}}</view>
+            <view style='color:#8b8b8b;margin-top: 10px;'>{{"R-"+r+" G-"+g+" B-"+b}}</view>
+        </view>
+    </view>
+    <view class="back">
+        <view class="slider-container" wx:key="key" wx:for="{{blendent.colors}}" wx:if="{{blendent.colors && selected === index}}">
+            <van-slider class="red" style='width:90%;' value="{{r*100/255}}" bind:change="onChange" data-type="r" min="0" max="100" />
+            <van-slider class='green' style='width:90%;' value="{{g/255*100}}" bind:change="onChange" data-type="g" min="0" max="100" />
+            <van-slider class='yellow' style='width:90%;' value="{{b/255*100}}" bind:change="onChange" data-type="b" min="0" max="100" />
+        </view>
+        <view class="text">
+        <input auto-focus placeholder="点击自命名" bindinput="input" maxlength="8"/>
+        </view>
+        <view wx:if="{{blendent.colors}}" style="width: 80%;height: 50px;display: flex;flex-direction: row;justify-content:space-between;align-items: center;position: relative; top: 20px;">
+            <view class="button" bindtap="copy">复 制</view>
+            <view class="button" bindtap="checkColors">保 存</view>
+        </view>
+    </view>
+</view>

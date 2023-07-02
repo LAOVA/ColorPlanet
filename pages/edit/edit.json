@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "van-button":"@vant/weapp/button/index", 
+        "van-slider": "@vant/weapp/slider/index"
+      },
+      "navigationBarTitleText": "颜色编辑"
+}

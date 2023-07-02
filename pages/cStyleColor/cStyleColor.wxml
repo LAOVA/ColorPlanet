@@ -1,0 +1,16 @@
+<van-search value="{{ value }}" shape="round" placeholder="请输入搜索关键词" bind:search="onChange" />
+
+<block wx:for="{{searchList}}" wx:key="key" style="justify-content: space-between;">
+    <view style="height: 116px; width: 90%;position: relative;left: 18px; background-color: #ffffff; border-radius: 20px;">
+        <view class="blank" style="background-color: {{item.hex}}; position: relative; left: 17rpx; top: 16rpx" data-color="{{item.hex}}" bindtap="copy">
+            <text style="font-size: 18px;font-weight: 600;">{{item.name}}</text>
+        </view>
+    </view>
+</block>
+
+<view class="hover">
+    <view class="hover-A">
+        <view class="cuIcon-top" style="font-size: 25px; color: #8b8b8b;" bindtap="handleBackTop">
+        </view>
+    </view>
+</view>

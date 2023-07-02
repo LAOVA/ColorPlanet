@@ -1,0 +1,35 @@
+/**app.wxss**/
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+button::after {
+  border-radius: 0;
+  border: none;
+}
+.relative {
+  position: relative;
+}
+.userLogin {
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  opacity: 0;
+  position: absolute;
+}
+.advert {
+  margin-top:40rpx;
+  margin-bottom:40rpx;
+}
+
+page {
+    background:linear-gradient(#e0e0e0,#e0e0e0); 
+  } 

@@ -1,0 +1,80 @@
+/* pages/colorConvert/colorConvert.wxss */
+.back {
+    position: relative;
+    top: 22px;
+    left: 20px;
+    width: 90%;
+    height: 25vh;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: 8px 8px 16px #bebebe,
+        -8px -8px 16px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.back2 {
+    position: relative;
+    top: 44px;
+    left: 20px;
+    width: 90%;
+    height: 600px;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: 8px 8px 16px #bebebe,
+        -8px -8px 16px #ffffff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.cark {
+    margin-top: 20px;
+    position: relative;
+    width: 150px;
+    height: 110px;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: 8px 8px 16px #bebebe,
+        -8px -8px 16px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+}
+
+
+.text {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: inset 8px 8px 16px #bebebe,
+        inset -8px -8px 16px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.button {
+    height: 46px;
+    width: 100px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 8px 8px 16px #bebebe,
+        -8px -8px 16px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: box-shadow .1s ease-in-out;  
+ 
+}  
+.button:active{  
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1), 0 0 0 rgba(255, 255, 255, 1),  
+    inset 5px 5px 30rpx rgba(0, 0, 0, 0.1), -18rpx -18rpx 30rpx rgba(255, 255, 255, 1);  
+}

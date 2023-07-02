@@ -1,0 +1,39 @@
+/* pages/user/user.wxss */
+.userinfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #aaa;
+    margin-top: 30px;
+}
+
+.userinfo-avatar {
+    position: relative;
+    overflow: hidden;
+    width: 128rpx;
+    height: 128rpx;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.3);
+}
+
+.userinfo-nickname {
+    position: relative;
+    top: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #000000;
+
+}
+
+
+.bg_ware {
+    /**波浪动态图**/
+    position: absolute;
+    width: 100%;
+    mix-blend-mode: screen;
+    /**透明部分用底部背景色填充，简称滤色**/
+    height: 120rpx;
+}
+

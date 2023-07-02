@@ -1,0 +1,59 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/user/user",
+        "pages/user/collection/collection",
+        "pages/seban/seban",
+        "pages/sehuan/sehuan",
+        "pages/cStyleColor/cStyleColor",
+        "pages/square/square",
+        "pages/edit/edit",
+        "pages/gColor/gColor",
+        "pages/sepan/sepan",
+        "pages/colorConvert/colorConvert",
+        "pages/colorPicker/colorPicker",
+        "pages/colorMatching/colorMatching"
+        
+
+    ],
+
+    "tabBar": {
+        "custom": true,
+        "color": "#000000",
+        "selectedColor": "#000000",
+        "backgroundColor": "#000000",
+        "list": [{
+                "pagePath": "pages/index/index"
+            },
+            {
+                "pagePath": "pages/user/user"
+            }
+        ]
+    },
+    
+    "usingComponents": {
+        "van-tabbar": "@vant/weapp/tabbar/index",
+        "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+        "van-dialog": "@vant/weapp/dialog/index",
+        "cu-custom": "/colorui/components/cu-custom",
+        "van-search": "@vant/weapp/search/index",
+        "van-divider": "@vant/weapp/divider/index",
+        "van-stepper": "@vant/weapp/stepper/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index",
+        "van-toast": "@vant/weapp/toast/index",
+        "van-icon": "@vant/weapp/icon/index"
+    },
+
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTitleText": "彩色星球",
+        "navigationBarTextStyle": "black"
+    },
+
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

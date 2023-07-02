@@ -1,0 +1,34 @@
+/* custom-tab-bar/index.wxss */
+@import "../colorui/icon.wxss";
+@import "../colorui/main.wxss";
+.color {
+    background:#fff;
+    color:#333;
+
+}
+.square {
+    background: #8b8b8b;
+    color: #ffffff;
+}
+
+.active {
+    color: #0e0e0e;
+    transition: color .1s ease-in-out;  
+}
+.default{
+    color: #8b8b8b;
+}
+.cu-bar{
+    min-height: 7vh;
+}
+
+
+.cu-bar.tabbar .action [class*="cuIcon-"] {
+    font-size: 50rpx;
+
+}
+
+.cu-bar.tabbar .action {
+    font-size: 26rpx;
+    
+}

@@ -1,0 +1,19 @@
+<view class="box">
+    <view wx:if="{{!imgPath}}" class='img-placeholder' bindtap='chooseImg'>
+        <image class='icon-add' src='/img/add.svg'></image>
+    </view>
+    <canvas wx:if="{{imgPath}}" id='image-handler' style='{{"width:"+canvasWidth+"px;height:"+canvasHeight+"px;"}}' canvas-id="imageHandler" bindtap='chooseImg'></canvas>
+    <van-stepper style="width: 188rpx;;margin: -80px auto 0;margin-top: 30px;" value="{{ 7 }}" min="4" max="7" disable-input='true' bind:change="reSet" />
+    <view class='colors-container' style='{{"width:"+colors.length * 40 + "px;margin-top: 20px;"}}' bindtap='edit'>
+        <view wx:for="{{colors}}" wx:key="key" class='color' style='{{"background-color:"+item}}'></view>
+    </view>
+    
+    <view style="width: 90%;display: flex; align-items: center;justify-content: center;flex-direction: column;margin-top: 20px;">
+        <view class='button-container'>
+            <view class='button' bindtap='checkColors'>保存</view>
+            <view class='button' bindtap='edit'>调色</view>
+        </view>
+        <view class="regain" bindtap="getColors">重新选取</view>
+    </view>
+
+</view>
