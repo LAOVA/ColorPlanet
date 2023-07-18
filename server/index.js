@@ -18,7 +18,7 @@ app.get("/api/login", async (req, res) => {
     const { code } = req.query
     if (code) {
         request({
-            url: `https://api.weixin.qq.com/sns/jscode2session?appid=wxb52875ebec86d053&secret=d84506107b10f2d5fff17bc03d966756&js_code=${code}&grant_type=authorization_code`
+            url: `https://api.weixin.qq.com/sns/jscode2session?appid=***&secret=***&js_code=${code}&grant_type=authorization_code`
         }, (err, response, data) => {
             res.send(data)
         })
